@@ -6,12 +6,12 @@ const timestamp = document.getElementById('timestamp');
 
 // Play & pause video
 const toggleVideoStatus = () => {
-  return true;
+  video.paused ? video.play() : video.pause();
 }
 
 // Update play/pause icon
 const updatePlayIcon = () => {
-  return true;
+  video.paused ? play.innerHTML = '<i class="fa fa-play fa-2x"></i>' : play.innerHTML = '<i class="fa fa-pause fa-2x"></i>'
 }
 
 //Update progress & timestamp
@@ -26,7 +26,8 @@ const setVideoProgress = () => {
 
 // Stop video
 const stopVideo = () => {
-  return true;
+  video.currentTime = 0;
+  video.pause();
 }
 
 // Event listeners
